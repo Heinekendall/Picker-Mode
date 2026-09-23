@@ -478,6 +478,25 @@ document.addEventListener('DOMContentLoaded', () => {
     bulkSelectedRows().forEach((row) => setBulkSelection(getBulkCheckbox(row), false));
   });
 
+  const moreButton = bulkActionBar?.querySelector('.bulk-more-trigger');
+  let bulkMoreMenu = null;
+  const closeBulkMoreMenu = () => { bulkMoreMenu?.remove(); bulkMoreMenu = null; };
+  const openBulkMoreMenu = () => {
+    closeBulkMoreMenu();
+    bulkMoreMenu = document.createElement('div');
+    bulkMoreMenu.className = 'bulk-more-menu';
+    bulkMoreMenu.setAttribute('role', 'menu');
+    bulkMoreMenu.innerHTML = '<button type="button" role="menuitem" data-more-action="edit-points">Edit Points</button><button type="button" role="menuitem" data-more-action="edit-practice">Edit Practice vs Graded</button><button type="button" role="menuitem" data-more-action="student-accommodation">Student Accommodation</button>';
+    document.body.append(bulkMoreMenu);
+    const buttonRect = moreButton.getBoundingClientRect();
+    const menuRect = bulkMoreMenu.getBoundingClientRect();
+    bulkMoreMenu.style.left = `${Math.max(8, buttonRect.right - menuRect.width)}px`;
+    bulkMoreMenu.style.top = `${Math.max(8, buttonRect.top - menuRect.height - 8)}px`;
+    bulkMoreMenu.querySelectorAll('[data-more-action]').forEach((item) => item.addEventListener('click', () => closeBulkMoreMenu()));
+  };
+  moreButton?.addEventListener('click', (event) => { event.stopPropagation(); bulkMoreMenu ? closeBulkMoreMenu() : openBulkMoreMenu(); });
+  document.addEventListener('click', (event) => { if (bulkMoreMenu && !bulkMoreMenu.contains(event.target) && event.target !== moreButton) closeBulkMoreMenu(); });
+
   const markRowsLinked = (rows) => {
     rows.forEach((row) => {
       const icon = row.querySelector('.row-icon');
@@ -493,8 +512,8 @@ document.addEventListener('DOMContentLoaded', () => {
     openModal({
       className: 'link-confirmation-modal-overlay',
       title: 'Import Completed',
-      body: '<div class="link-confirmation-content"><p>Your import is complete. You should be redirected back to your LMS shortly.</p></div>',
-      footer: ''
+      body: '<div class="link-confirmation-content"></div>',
+      footer: '<button type="button" class="modal-button secondary" data-modal-close>Continue Editing</button><button type="button" class="modal-button primary" data-modal-close>Return to Course Setup</button>'
     });
   };
 

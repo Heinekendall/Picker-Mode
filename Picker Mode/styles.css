@@ -163,8 +163,15 @@ body:before,body:after{display:none}.content{margin-left:auto!important;padding-
 .cleaned-frame .checkbox[aria-checked="true"]:before{border-color:#3942b0;background:#3942b0 url("https://www.figma.com/api/mcp/asset/7c622f9d-c863-4d3d-89ef-67ccfd736732.svg") center/24px 24px no-repeat}
 .cleaned-frame .checkbox[aria-checked="true"]:after{content:none}
 .cleaned-frame .checkbox.magma-checkbox-host{font-size:initial;line-height:normal;color:inherit;display:flex;align-items:center;justify-content:center}
-.cleaned-frame .checkbox.magma-checkbox-host:before,.cleaned-frame .checkbox.magma-checkbox-host:after{content:none;display:none}
+.cleaned-frame .checkbox.magma-checkbox-host:before,.cleaned-frame .checkbox.magma-checkbox-host:after{content:none!important;display:none!important}
+.cleaned-frame .checkbox.magma-checkbox-host>div{display:flex!important;align-items:center!important;width:24px!important;height:24px!important;margin:0!important;padding:0!important}
+.cleaned-frame .checkbox.magma-checkbox-host label{display:flex!important;align-items:center!important;width:24px!important;height:24px!important;margin:0!important;padding:0!important}
+.cleaned-frame .checkbox.magma-checkbox-host label>svg,.cleaned-frame .checkbox.magma-checkbox-host label svg{display:block!important;width:24px!important;height:24px!important;min-width:24px!important;min-height:24px!important;max-width:24px!important;max-height:24px!important;flex:0 0 24px!important}
+.cleaned-frame .checkbox.magma-checkbox-host input.magma-checkbox-input{position:absolute!important;inset:0 auto auto 0!important;width:24px!important;height:24px!important;margin:0!important;padding:0!important;opacity:0!important;cursor:pointer!important}
+.cleaned-frame .checkbox.magma-checkbox-host svg.icon{display:block!important;width:24px!important;height:24px!important;min-width:24px!important;min-height:24px!important;max-width:24px!important;max-height:24px!important}
 .cleaned-frame .item-row>.checkbox.magma-checkbox-host{box-sizing:border-box;padding:0}
+.cleaned-frame .item-row.simple>.checkbox.magma-checkbox-host svg.icon{width:24px!important;height:24px!important;min-width:24px!important;min-height:24px!important;max-width:24px!important;max-height:24px!important}
+.cleaned-frame .item-row.assessment>.checkbox.magma-checkbox-host svg.icon{width:24px!important;height:24px!important;min-width:24px!important;min-height:24px!important;max-width:24px!important;max-height:24px!important}
 .cleaned-frame .item-row:not(.assessment)>.checkbox{justify-self:center;align-self:center}
 .cleaned-frame .item-row.selected,.cleaned-frame .course-link-row.selected,.cleaned-frame .folder-row.selected,.cleaned-frame .group-row.selected{box-shadow:none}
 .cleaned-frame .item-row.is-hidden{background:#f7f7f7}
@@ -530,7 +537,7 @@ body>.modal-overlay.bulk-dates-modal-overlay.bulk-dates-remove-mode .bulk-dates-
 body>.modal-overlay.link-confirmation-modal-overlay{align-items:center;background:rgba(45,45,45,.58);backdrop-filter:blur(4px)}
 body>.modal-overlay.link-confirmation-modal-overlay .activity-modal{width:min(710px,calc(100vw - 32px));height:min(245px,calc(100vh - 32px));max-height:none;border:0;border-radius:4px;box-shadow:none;overflow:hidden}
 body>.modal-overlay.link-confirmation-modal-overlay .activity-modal-heading{display:block;min-height:131px;height:131px;padding:91px 50px 0;box-sizing:border-box;flex:0 0 131px}
-body>.modal-overlay.link-confirmation-modal-overlay .activity-modal-heading h2{margin:0;color:#454545;font:400 32px/40px 'Work Sans',Arial,sans-serif}
+body>.modal-overlay.link-confirmation-modal-overlay .activity-modal-heading h2{margin:0;color:#454545;font:400 32px/40px 'Work Sans',Arial,sans-serif;text-align:center}
 body>.modal-overlay.link-confirmation-modal-overlay .activity-modal-close{top:18px;right:18px;width:24px;height:24px;padding:0;border:0;border-radius:0;background:transparent;color:#707070;font:400 28px/24px Arial,sans-serif}
 body>.modal-overlay.link-confirmation-modal-overlay .activity-modal-close:hover{background:#f5f5f5;outline:none}
 body>.modal-overlay.link-confirmation-modal-overlay .activity-modal-close:focus{background:transparent;outline:none}
@@ -538,6 +545,15 @@ body>.modal-overlay.link-confirmation-modal-overlay .activity-modal-close:focus-
 body>.modal-overlay.link-confirmation-modal-overlay .activity-modal-body{flex:0 0 auto;min-height:0;padding:16px 50px 0;overflow:visible;color:#707070;font:400 20px/28px 'Work Sans',Arial,sans-serif}
 body>.modal-overlay.link-confirmation-modal-overlay .link-confirmation-content{padding:0;color:#707070}
 body>.modal-overlay.link-confirmation-modal-overlay .link-confirmation-content p{margin:0}
+body>.modal-overlay.link-confirmation-modal-overlay .activity-modal-footer{display:flex;justify-content:center;align-items:center;gap:12px;height:72px;padding:12px 50px 20px;border-top:0}
+body>.modal-overlay.link-confirmation-modal-overlay .modal-button{min-width:190px;height:40px;border:0;border-radius:8px;font:500 14px/20px 'Work Sans',Arial,sans-serif}
+body>.modal-overlay.link-confirmation-modal-overlay .modal-button.secondary{background:#fff;color:#3942b0;border:2px solid #3942b0}
+body>.modal-overlay.link-confirmation-modal-overlay .modal-button.primary{background:#3942b0;color:#fff}
+.bulk-action-button.bulk-more-trigger{font-size:0;gap:0;padding-left:12px;padding-right:12px}
+.bulk-action-button.bulk-more-trigger img{margin:0;width:24px;height:24px}
+.bulk-more-menu{position:fixed!important;z-index:9999!important;display:block!important;visibility:visible!important;opacity:1!important;min-width:220px;padding:8px 0;border:1px solid #d4d4d4;border-radius:4px;background:#fff;box-shadow:0 8px 20px rgba(0,0,0,.2)}
+.bulk-more-menu button{display:block;width:100%;padding:10px 16px;border:0;background:#fff;color:#454545;text-align:left;font:400 14px/20px 'Work Sans',Arial,sans-serif;cursor:pointer}
+.bulk-more-menu button:hover,.bulk-more-menu button:focus{background:#f5f5f5;color:#3942b0;outline:none}
 @media(max-width:700px){body>.modal-overlay.link-confirmation-modal-overlay .activity-modal{width:calc(100vw - 24px);height:auto;min-height:245px}body>.modal-overlay.link-confirmation-modal-overlay .activity-modal-heading{padding-left:24px;padding-right:48px}body>.modal-overlay.link-confirmation-modal-overlay .activity-modal-body{padding-left:24px;padding-right:24px}}
 
 /* Edit points modal: compact assignment-points editor from the course picker design. */
