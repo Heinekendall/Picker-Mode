@@ -18,10 +18,10 @@ pnpm build
 pnpm preview
 ```
 
-For GitHub Pages, publish the generated `dist` directory (not the raw source
-directory). The Vite build rewrites the React module and its dependencies into
-browser-ready assets and uses relative paths so it works from a repository
-subfolder.
+For GitHub Pages, enable GitHub Actions as the Pages source. The included
+`.github/workflows/deploy-pages.yml` builds the project and publishes `dist`.
+Do not use “Deploy from a branch” with the raw source directory: GitHub will
+serve `src/main.jsx` as a file instead of running Vite and installing React.
 
 ## Project map
 
