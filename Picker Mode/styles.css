@@ -424,6 +424,12 @@ body>.modal-overlay .date-input-host>div,.cleaned-frame .date-input-host>div{wid
 
 .cleaned-frame .due-date{display:block}
 .cleaned-frame .inline-date-host{position:relative;display:inline-block;z-index:20}
+.cleaned-frame .inline-date-picker-control{display:inline-flex;align-items:center;gap:4px;min-width:0;color:#707070;vertical-align:middle}
+.cleaned-frame .inline-date-picker-control .date-prefix{flex:0 0 auto;color:#707070}
+.cleaned-frame .inline-date-picker-control>div{width:auto!important;margin:0!important}
+.cleaned-frame .inline-date-picker-control input{height:24px!important;min-width:0!important;width:auto!important;padding:0!important;border:0!important;border-radius:2px!important;background:transparent!important;color:#3942b0!important;font:inherit!important;line-height:20px!important;box-shadow:none!important}
+.cleaned-frame .inline-date-picker-control input:hover,.cleaned-frame .inline-date-picker-control input:focus{ text-decoration:underline;text-underline-offset:2px }
+.cleaned-frame .inline-date-picker-control button{display:none!important}
 .cleaned-frame .inline-date-trigger{padding:0;border:0;background:transparent;color:#454545;font:inherit;line-height:inherit;cursor:pointer}
 .cleaned-frame .inline-date-trigger em{font-style:normal;color:#3942b0}
 .cleaned-frame .unlock-meta .inline-date-trigger,.cleaned-frame .unlock-meta .inline-date-trigger em,.cleaned-frame .unlock-meta .inline-date-trigger .date-prefix{color:#454545}

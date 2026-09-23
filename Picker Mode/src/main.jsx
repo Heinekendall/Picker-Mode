@@ -140,7 +140,7 @@ function MagmaDateInput({ host }) {
 
 function InlineMagmaDatePicker({ host }) {
   const label = host.dataset.dateLabel || 'Date';
-  const [date, setDate] = useState(() => parseDateLabel(host.dataset.dateValue));
+  const date = parseDateLabel(host.dataset.dateValue);
   const suffix = host.dataset.dateSuffix || '';
   const datePrefix = label === 'Date Available' ? 'Unlocks' : 'Due';
   const displayDate = date
@@ -151,7 +151,7 @@ function InlineMagmaDatePicker({ host }) {
 
   return (
     <span className="inline-date-text" aria-label={`${datePrefix} ${displayDate}`}>
-        <span className="date-prefix">{datePrefix}</span> <em>{displayDate}</em>
+      <span className="date-prefix">{datePrefix}</span> <em>{displayDate}</em>
     </span>
   );
 }
