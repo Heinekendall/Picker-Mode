@@ -18,6 +18,11 @@ pnpm build
 pnpm preview
 ```
 
+For GitHub Pages, publish the generated `dist` directory (not the raw source
+directory). The Vite build rewrites the React module and its dependencies into
+browser-ready assets and uses relative paths so it works from a repository
+subfolder.
+
 ## Project map
 
 - `index.html` — static picker markup and page shell.
