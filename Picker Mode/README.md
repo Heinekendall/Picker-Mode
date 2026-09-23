@@ -35,3 +35,4 @@ serve `src/main.jsx` as a file instead of running Vite and installing React.
 - Figma asset URLs are used when available; `behavior.js` supplies local inline SVG fallbacks when an asset fails to load.
 - The current prototype intentionally renders inline due/unlock dates as display text. The generic date-input layer remains available for modal/form fields.
 - The list/calendar toggle uses `.is-active` on the selected control. Keep active-state styling in the single view-toggle block in `styles.css` so the two modes cannot drift apart.
+- The build copies `behavior.js` into `dist`; this is required for Vercel/GitHub Pages deployments because Vite only bundles files imported by the module graph.
