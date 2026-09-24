@@ -48,6 +48,7 @@ body:before,body:after{display:none}.content{margin-left:auto!important;padding-
 .cleaned-frame .view-icon{display:block;width:20px;height:20px;object-fit:contain}
 .cleaned-frame .view-text{display:inline;font:500 12px/16px 'Work Sans',Arial,sans-serif;letter-spacing:.32px;white-space:nowrap}
 .cleaned-frame .view-label{font:400 14px/20px 'Work Sans',Arial,sans-serif}
+.cleaned-frame .view{gap:0}
 .cleaned-frame .view>b,.cleaned-frame .view>span{width:auto;height:28px;padding:4px 8px;gap:4px;margin-left:0}
 .cleaned-frame .view>span{display:grid;place-items:center;width:28px;height:28px;margin-left:-6px;cursor:pointer;border-radius:4px}.cleaned-frame .view>b{cursor:pointer}.cleaned-frame .view>b.is-active,.cleaned-frame .view>span.is-active{background:#303b91;color:#fff}
 .cleaned-frame .course-link-row,.cleaned-frame .folder-row,.cleaned-frame .group-row{height:48px;display:flex;align-items:center;gap:12px;padding:0 24px;border-bottom:1px solid #d9d9d9;background:#fff}
