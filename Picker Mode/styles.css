@@ -46,6 +46,9 @@ body:before,body:after{display:none}.content{margin-left:auto!important;padding-
 .cleaned-frame .view b{display:grid;place-items:center;width:28px;height:28px;margin-left:-6px;padding:0;border-radius:4px;background:#303b91;color:#fff;font-size:15px;font-weight:400}
 .cleaned-frame .view span{font-size:15px}
 .cleaned-frame .view-icon{display:block;width:20px;height:20px;object-fit:contain}
+.cleaned-frame .view-text{display:inline;font:500 12px/16px 'Work Sans',Arial,sans-serif;letter-spacing:.32px;white-space:nowrap}
+.cleaned-frame .view-label{font:400 14px/20px 'Work Sans',Arial,sans-serif}
+.cleaned-frame .view>b,.cleaned-frame .view>span{width:auto;height:28px;padding:4px 8px;gap:4px;margin-left:0}
 .cleaned-frame .view>span{display:grid;place-items:center;width:28px;height:28px;margin-left:-6px;cursor:pointer;border-radius:4px}.cleaned-frame .view>b{cursor:pointer}.cleaned-frame .view>b.is-active,.cleaned-frame .view>span.is-active{background:#303b91;color:#fff}
 .cleaned-frame .course-link-row,.cleaned-frame .folder-row,.cleaned-frame .group-row{height:48px;display:flex;align-items:center;gap:12px;padding:0 24px;border-bottom:1px solid #d9d9d9;background:#fff}
 .cleaned-frame .course-link-row .checkbox,.cleaned-frame .folder-row .checkbox,.cleaned-frame .group-row .checkbox{width:22px;flex:0 0 22px}
@@ -554,6 +557,9 @@ body>.modal-overlay.link-confirmation-modal-overlay .modal-button.primary{backgr
 .bulk-more-menu{position:fixed!important;z-index:9999!important;display:block!important;visibility:visible!important;opacity:1!important;min-width:220px;padding:8px 0;border:1px solid #d4d4d4;border-radius:4px;background:#fff;box-shadow:0 8px 20px rgba(0,0,0,.2)}
 .bulk-more-menu button{display:block;width:100%;padding:10px 16px;border:0;background:#fff;color:#454545;text-align:left;font:400 14px/20px 'Work Sans',Arial,sans-serif;cursor:pointer}
 .bulk-more-menu button:hover,.bulk-more-menu button:focus{background:#f5f5f5;color:#3942b0;outline:none}
+.cleaned-frame .view>b,.cleaned-frame .view>span{width:auto;height:28px;padding:4px 8px;margin-left:0;gap:4px}
+.cleaned-frame .view>b .view-text,.cleaned-frame .view>span .view-text{display:inline;font:500 12px/16px 'Work Sans',Arial,sans-serif;letter-spacing:.32px;white-space:nowrap}
+.cleaned-frame .view-label{font:400 14px/20px 'Work Sans',Arial,sans-serif}
 @media(max-width:700px){body>.modal-overlay.link-confirmation-modal-overlay .activity-modal{width:calc(100vw - 24px);height:auto;min-height:245px}body>.modal-overlay.link-confirmation-modal-overlay .activity-modal-heading{padding-left:24px;padding-right:48px}body>.modal-overlay.link-confirmation-modal-overlay .activity-modal-body{padding-left:24px;padding-right:24px}}
 
 /* Edit points modal: compact assignment-points editor from the course picker design. */

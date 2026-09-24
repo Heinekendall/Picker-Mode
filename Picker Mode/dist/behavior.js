@@ -486,7 +486,7 @@ document.addEventListener('DOMContentLoaded', () => {
     bulkMoreMenu = document.createElement('div');
     bulkMoreMenu.className = 'bulk-more-menu';
     bulkMoreMenu.setAttribute('role', 'menu');
-    bulkMoreMenu.innerHTML = '<button type="button" role="menuitem" data-more-action="edit-points">Edit Points</button><button type="button" role="menuitem" data-more-action="edit-practice">Edit Practice vs Graded</button><button type="button" role="menuitem" data-more-action="remove">Remove</button>';
+    bulkMoreMenu.innerHTML = '<button type="button" role="menuitem" data-more-action="edit-points">Edit Points</button><button type="button" role="menuitem" data-more-action="edit-practice">Edit Practice vs Graded</button><button type="button" role="menuitem" data-more-action="student-accommodation">Student Accommodation</button>';
     document.body.append(bulkMoreMenu);
     const buttonRect = moreButton.getBoundingClientRect();
     const menuRect = bulkMoreMenu.getBoundingClientRect();
